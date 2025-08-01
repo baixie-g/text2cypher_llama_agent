@@ -8,14 +8,14 @@ from llama_index.llms.gemini import Gemini
 from llama_index.llms.mistralai import MistralAI
 from llama_index.llms.openai import OpenAI
 from llama_index.llms.openai_like import OpenAILike
+from sentence_transformers import SentenceTransformer
 
 
 class ResourceManager:
-    llms = []
-    databases = {}
-    embed_model = None
-
     def __init__(self):
+        self.llms = []
+        self.databases = {}
+        self.embed_model = None
         self.init_llms()
         self.init_databases()
         self.init_embed_model()
@@ -116,6 +116,32 @@ class ResourceManager:
                 ]
             )
 
+        if os.getenv("ARK_API_KEY"):
+            self.llms.extend(
+                [
+                    (
+                        "ark-model",
+                        OpenAILike(
+                            model=os.getenv("ARK_MODEL_ID", "ep-20250716102319-wdqpt"),
+                            api_base=os.getenv("ARK_BASE_URL", "https://ark.cn-beijing.volces.com/api/v3"),
+                            api_key=os.getenv("ARK_API_KEY", "cb103329-5b77-418e-89f2-fea182318c91"),
+                            api_version="2024-01-01",  # 添加 API 版本
+                            is_chat_model=True,  # 关键修正
+                        ),
+                    ),
+                    (
+                        "doubao-seed-1.6",
+                        OpenAILike(
+                            model="doubao-seed-1-6-250615",
+                            api_base=os.getenv("ARK_BASE_URL", "https://ark.cn-beijing.volces.com/api/v3"),
+                            api_key=os.getenv("ARK_API_KEY", "cb103329-5b77-418e-89f2-fea182318c91"),
+                            api_version="2024-01-01",
+                            is_chat_model=True,
+                        ),
+                    )
+                ]
+            )
+
         print(f"Loaded {len(self.llms)} llms.")
 
     def init_databases(self):
@@ -147,18 +173,50 @@ class ResourceManager:
                 except Exception as ex:
                     print(ex)
 
-        if os.getenv("NEO4J_DATABASE"):
-            self.databases["default"] = {
-                "uri": os.getenv("NEO4J_URI"),
-                "database": os.getenv("NEO4J_DATABASE"),
-                "username": os.getenv("NEO4J_USERNAME"),
-                "password": os.getenv("NEO4J_PASSWORD"),
-            }
+        dft_database = os.getenv("NEO4J_DATABASE")
+        if dft_database != None:
+            print(f"-> Initializing default database: {dft_database}")
+            try:
+                graph_store = Neo4jPropertyGraphStore(
+                    url=os.getenv("NEO4J_URI"),
+                    username=os.getenv("NEO4J_USERNAME"),
+                    password=os.getenv("NEO4J_PASSWORD"),
+                    database=os.getenv("NEO4J_DATABASE"),
+                    enhanced_schema=True,
+                    create_indexes=False,
+                    timeout=30,
+                )
+                print(f"-> Getting corrector schema for {dft_database} database.")
+                corrector_schema = self.get_corrector_schema(graph_store)
+                print(f"-> 成功获取 corrector schema 为: {corrector_schema}")
+                self.databases[dft_database] = {
+                    "graph_store": graph_store,
+                    "corrector_schema": corrector_schema,
+                    "name": dft_database,
+                }
+            except Exception as ex:
+                print(ex)
 
         print(f"Loaded {len(self.databases)} databases.")
 
     def init_embed_model(self):
-        self.embed_model = OpenAIEmbedding(model="text-embedding-3-small")
+        # # 如果模型已经下载到本地，请指定其路径；否则，直接用模型名从HuggingFace Hub下载
+        # model_path = "/home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3"  # 或者 "BAAI/bge-m3"
+
+        # # 注意：这里要加上 trust_remote_code=True，如果模型需要额外的自定义代码支持
+        # self.embed_model = HuggingFaceEmbedding(model_name=model_path, trust_remote_code=True)
+
+        # # 如果 bge-m3 模型维度不是默认的768，你需要手动设置dimensions参数。
+        # # 根据文档或模型详情确认正确的维度大小，这里假设为1536以匹配OpenAI的配置
+        # self.embed_model.dimensions = 1536
+        # model_path = "/home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3"
+        # self.embed_model = BgeEmbedding(model_path=model_path)
+        import torch
+        import os
+        # 强制使用CPU
+        os.environ["CUDA_VISIBLE_DEVICES"] = ""
+        self.embed_model = SentenceTransformer("BAAI/bge-m3", device="cpu")
+
 
     def get_model_by_name(self, name):
         for model_name, model in self.llms:

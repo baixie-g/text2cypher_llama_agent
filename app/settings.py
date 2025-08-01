@@ -1,7 +1,7 @@
-from workflows.iterative_planner import IterativePlanningFlow
-from workflows.naive_text2cypher import NaiveText2CypherFlow
-from workflows.naive_text2cypher_retry import NaiveText2CypherRetryFlow
-from workflows.text2cypher_retry_check import NaiveText2CypherRetryCheckFlow
+from cypher_workflows.iterative_planner import IterativePlanningFlow
+from cypher_workflows.naive_text2cypher import NaiveText2CypherFlow
+from cypher_workflows.naive_text2cypher_retry import NaiveText2CypherRetryFlow
+from cypher_workflows.text2cypher_retry_check import NaiveText2CypherRetryCheckFlow
 
 WORKFLOW_MAP = {
     "text2cypher_with_1_retry_and_output_check": NaiveText2CypherRetryCheckFlow,

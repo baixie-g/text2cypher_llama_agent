@@ -10,9 +10,11 @@ from llama_index.core.workflow import (
 )
 from llama_index.graph_stores.neo4j import CypherQueryCorrector
 
-from workflows.shared.local_fewshot_manager import LocalFewshotManager
-from workflows.shared.sse_event import SseEvent
-from workflows.steps.iterative_planner import (
+from cypher_workflows.shared.local_fewshot_manager import LocalFewshotManager
+from cypher_workflows.shared.sse_event import SseEvent
+from cypher_workflows.shared.utils import get_neo4j_schema_str
+import os
+from cypher_workflows.steps.iterative_planner import (
     correct_cypher_step,
     generate_cypher_step,
     get_final_answer_prompt,
@@ -72,6 +74,12 @@ class IterativePlanningFlow(Workflow):
         self.cypher_query_corrector = CypherQueryCorrector(db["corrector_schema"])
         self.few_shot_retriever = LocalFewshotManager()
         self.db_name = db["name"]
+        # 新增：初始化时获取schema
+        uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+        username = os.getenv("NEO4J_USERNAME", "neo4j")
+        password = os.getenv("NEO4J_PASSWORD", "12345678")
+        database = os.getenv("NEO4J_DATABASE", "neo4j")
+        self.schema = get_neo4j_schema_str(uri, username, password, database, exclude_types=["Actor", "Director"])
 
     @step
     async def start(self, ctx: Context, ev: StartEvent) -> InitialPlan | FinalAnswer:
@@ -122,17 +130,17 @@ class IterativePlanningFlow(Workflow):
         ctx: Context,
         ev: GenerateCypher,
     ) -> ValidateCypher:
-        fewshot_examples = self.fewshot_retriever.get_fewshot_examples(
+        fewshot_examples = self.few_shot_retriever.get_fewshot_examples(
             ev.subquery, self.db_name
         )
-
+        # 传递schema
         generated_cypher = await generate_cypher_step(
             self.llm,
             self.graph_store,
             ev.subquery,
             fewshot_examples,
+            self.schema,
         )
-
         return ValidateCypher(
             subquery=ev.subquery, generated_cypher=generated_cypher, retries=ev.retries
         )
@@ -172,23 +180,17 @@ class IterativePlanningFlow(Workflow):
     async def correct_cypher_step(
         self, ctx: Context, ev: CorrectCypher
     ) -> ValidateCypher:
-        ctx.write_event_to_stream(
-            SseEvent(
-                message=f"Corecting Cypher query: {ev.cypher} due to error: {ev.errors}",
-                label=f"Cypher correction: {ev.subquery}",
-            )
-        )
-
-        results = await correct_cypher_step(
+        # 传递schema
+        corrected_cypher = await correct_cypher_step(
             self.llm,
             self.graph_store,
             ev.subquery,
             ev.cypher,
             ev.errors,
+            self.schema,
         )
-
         return ValidateCypher(
-            subquery=ev.subquery, generated_cypher=results, retries=ev.retries
+            subquery=ev.subquery, generated_cypher=corrected_cypher, retries=ev.retries
         )
 
     @step

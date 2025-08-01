@@ -81,7 +81,11 @@ async def initial_plan_step(llm, question):
         subquery_template.format(question=question)
     )
 
+    # return {
+    #     "next_event": "generate_cypher",
+    #     "arguments": {"plan": queries_output.raw.plan, "question": question},
+    # }
     return {
-        "next_event": "generate_cypher",
+        "next_event": "generate_cypher_step",
         "arguments": {"plan": queries_output.raw.plan, "question": question},
     }

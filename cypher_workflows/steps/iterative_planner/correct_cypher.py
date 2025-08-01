@@ -1,4 +1,5 @@
 from llama_index.core import ChatPromptTemplate
+import os
 
 CORRECT_CYPHER_SYSTEM_TEMPLATE = """You are a Cypher expert reviewing a statement written by a junior developer.
 You need to correct the Cypher statement based on the provided errors. No pre-amble."
@@ -27,19 +28,18 @@ The errors are:
 Corrected Cypher statement: """
 
 
-async def correct_cypher_step(llm, graph_store, subquery, cypher, errors):
-    schema = graph_store.get_schema_str(exclude_types=["Actor", "Director"])
-
-    # Correct cypher
+async def correct_cypher_step(llm, graph_store, subquery, cypher, errors, schema):
     correct_cypher_messages = [
         ("system", CORRECT_CYPHER_SYSTEM_TEMPLATE),
         ("user", CORRECT_CYPHER_USER_TEMPLATE),
     ]
-
     correct_cypher_prompt = ChatPromptTemplate.from_messages(correct_cypher_messages)
     response = await llm.achat(
         correct_cypher_prompt.format_messages(
-            question=subquery, schema=schema, errors=errors, cypher=cypher
+            question=subquery,
+            schema=schema,
+            errors=errors,
+            cypher=cypher,
         )
     )
     return response.message.content

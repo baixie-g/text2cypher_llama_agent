@@ -9,12 +9,19 @@ from llama_index.core.workflow import (
     step,
 )
 
-from workflows.shared.local_fewshot_manager import LocalFewshotManager
-from workflows.shared.sse_event import SseEvent
-from workflows.steps.naive_text2cypher import (
+from cypher_workflows.shared.neo4j_fewshot_manager import Neo4jFewshotManager
+from cypher_workflows.shared.local_fewshot_manager import LocalFewshotManager
+from cypher_workflows.shared.sse_event import SseEvent
+from cypher_workflows.steps.naive_text2cypher import (
     generate_cypher_step,
     get_naive_final_answer_prompt,
 )
+
+# 导入日志工具
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+from app.utils import get_llm_logger
 
 
 class SummarizeEvent(Event):
@@ -34,16 +41,21 @@ class NaiveText2CypherFlow(Workflow):
 
         self.llm = llm
         self.graph_store = db["graph_store"]
-        self.fewshot_retriever = LocalFewshotManager()
+        # 优先用Neo4jFewshotManager，否则用本地parquet
+        self.neo4j_fewshot_manager = Neo4jFewshotManager()
+        if self.neo4j_fewshot_manager.graph_store:
+            # 需要传入embed_model
+            self.fewshot_retriever = lambda question, db_name: self.neo4j_fewshot_manager.retrieve_fewshots(question, db_name, embed_model)
+        else:
+            self.local_fewshot_manager = LocalFewshotManager()
+            self.fewshot_retriever = lambda question, db_name: self.local_fewshot_manager.get_fewshot_examples(question, db_name)
         self.db_name = db["name"]
 
     @step
     async def generate_cypher(self, ctx: Context, ev: StartEvent) -> ExecuteCypherEvent:
         question = ev.input
 
-        fewshot_examples = self.fewshot_retriever.get_fewshot_examples(
-            question, self.db_name
-        )
+        fewshot_examples = self.fewshot_retriever(question, self.db_name)
 
         cypher_query = await generate_cypher_step(
             self.llm,
@@ -66,10 +78,12 @@ class NaiveText2CypherFlow(Workflow):
     async def execute_query(
         self, ctx: Context, ev: ExecuteCypherEvent
     ) -> SummarizeEvent:
+        print(f"[DEBUG] 执行 Cypher 查询: {ev.cypher}")
         try:
-            # Hard limit to 100 records
             database_output = str(self.graph_store.structured_query(ev.cypher)[:100])
+            print(f"[DEBUG] 查询结果: {database_output}")
         except Exception as e:
+            print(f"[ERROR] 查询 Neo4j 主库失败: {e}")
             database_output = str(e)
         ctx.write_event_to_stream(
             SseEvent(
@@ -82,12 +96,26 @@ class NaiveText2CypherFlow(Workflow):
 
     @step
     async def summarize_answer(self, ctx: Context, ev: SummarizeEvent) -> StopEvent:
+        # 获取日志记录器
+        logger = get_llm_logger()
+        
         naive_final_answer_prompt = get_naive_final_answer_prompt()
-        gen = await self.llm.astream_chat(
-            naive_final_answer_prompt.format_messages(
-                context=ev.context, question=ev.question, cypher_query=ev.cypher
-            )
+        
+        # 准备发送给LLM的提示词
+        prompt_messages = naive_final_answer_prompt.format_messages(
+            context=ev.context, question=ev.question, cypher_query=ev.cypher
         )
+        
+        # 记录发送给LLM的提示词
+        context = {
+            "question": ev.question,
+            "cypher_query": ev.cypher,
+            "database_context": ev.context
+        }
+        logger.log_prompt("生成最终答案(简单流程)", prompt_messages, context)
+        
+        # 发送给LLM并获取流式回应
+        gen = await self.llm.astream_chat(prompt_messages)
         final_answer = ""
         async for response in gen:
             final_answer += response.delta
@@ -97,6 +125,9 @@ class NaiveText2CypherFlow(Workflow):
                     message=response.delta,
                 )
             )
+        
+        # 记录LLM的完整回应
+        logger.log_response("生成最终答案(简单流程)", final_answer, context)
 
         stop_event = StopEvent(
             result={

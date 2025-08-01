@@ -1,4 +1,5 @@
 from llama_index.core import ChatPromptTemplate
+import os
 
 GENERATE_SYSTEM_TEMPLATE = """Given an input question, convert it to a Cypher query. No pre-amble.
 Do not wrap the response in any backticks or anything else. Respond with a Cypher statement only!"""
@@ -16,16 +17,12 @@ User input: {question}
 Cypher query:"""
 
 
-async def generate_cypher_step(llm, graph_store, subquery, fewshot_examples):
-    schema = graph_store.get_schema_str(exclude_types=["Actor", "Director"])
-
+async def generate_cypher_step(llm, graph_store, subquery, fewshot_examples, schema):
     generate_cypher_msgs = [
         ("system", GENERATE_SYSTEM_TEMPLATE),
         ("user", GENERATE_USER_TEMPLATE),
     ]
-
     text2cypher_prompt = ChatPromptTemplate.from_messages(generate_cypher_msgs)
-
     response = await llm.achat(
         text2cypher_prompt.format_messages(
             question=subquery,
@@ -33,5 +30,4 @@ async def generate_cypher_step(llm, graph_store, subquery, fewshot_examples):
             fewshot_examples=fewshot_examples,
         )
     )
-
     return response.message.content

@@ -9,17 +9,22 @@ from llama_index.core.workflow import (
     step,
 )
 
-from workflows.shared.local_fewshot_manager import LocalFewshotManager
-from workflows.shared.neo4j_fewshot_manager import Neo4jFewshotManager
-from workflows.shared.sse_event import SseEvent
-from workflows.shared.utils import check_ok
-from workflows.steps.naive_text2cypher import (
+from cypher_workflows.shared.local_fewshot_manager import LocalFewshotManager
+from cypher_workflows.shared.neo4j_fewshot_manager import Neo4jFewshotManager
+from cypher_workflows.shared.sse_event import SseEvent
+from cypher_workflows.shared.utils import check_ok
+from cypher_workflows.steps.naive_text2cypher import (
     correct_cypher_step,
     evaluate_database_output_step,
     generate_cypher_step,
     get_naive_final_answer_prompt,
 )
 
+# 导入日志工具
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+from app.utils import get_llm_logger
 
 class SummarizeEvent(Event):
     question: str
@@ -60,10 +65,19 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
         if self.fewshot_manager.graph_store:
             self.fewshot_retriever = self.fewshot_manager.retrieve_fewshots
         else:
-            self.fewshot_retriever = LocalFewshotManager().retrieve_fewshots
+            # self.fewshot_retriever = LocalFewshotManager().retrieve_fewshot
+            # Create a wrapper to match the interface of retrieve_fewshots
+            local_manager = LocalFewshotManager()
+            self.fewshot_retriever = lambda question, database, embed_model: local_manager.get_fewshot_examples(question, database)
 
     @step
     async def generate_cypher(self, ctx: Context, ev: StartEvent) -> ExecuteCypherEvent:
+        # 获取日志记录器
+        logger = get_llm_logger()
+        
+        # 记录步骤开始
+        logger.log_workflow_step("步骤开始", "开始生成Cypher查询", {"question": ev.input})
+        
         # Init global vars
         await ctx.set("retries", 0)
 
@@ -79,6 +93,10 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
             subquery=question,
             fewshot_examples=fewshot_examples,
         )
+        
+        # 记录步骤完成
+        logger.log_workflow_step("步骤完成", "Cypher查询生成完成", {"cypher": cypher_query})
+        
         # Return for the next step
         return ExecuteCypherEvent(question=question, cypher=cypher_query)
 
@@ -86,6 +104,12 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
     async def execute_query(
         self, ctx: Context, ev: ExecuteCypherEvent
     ) -> EvaluateEvent | CorrectCypherEvent:
+        # 获取日志记录器
+        logger = get_llm_logger()
+        
+        # 记录步骤开始
+        logger.log_workflow_step("步骤开始", "开始执行Cypher查询", {"cypher": ev.cypher})
+        
         # Get global var
         retries = await ctx.get("retries")
 
@@ -95,8 +119,10 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
         try:
             # Hard limit to 100 records
             database_output = str(self.graph_store.structured_query(ev.cypher)[:100])
+            logger.log_workflow_step("步骤完成", "Cypher查询执行成功", {"output_length": len(database_output)})
         except Exception as e:
             database_output = str(e)
+            logger.log_workflow_step("步骤错误", "Cypher查询执行失败", {"error": database_output})
             ctx.write_event_to_stream(
                 SseEvent(
                     message=f"Cypher Execution error: {database_output}",
@@ -122,11 +148,21 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
     async def evaluate_context(
         self, ctx: Context, ev: EvaluateEvent
     ) -> SummarizeEvent | CorrectCypherEvent:
+        # 获取日志记录器
+        logger = get_llm_logger()
+        
+        # 记录步骤开始
+        logger.log_workflow_step("步骤开始", "开始评估数据库输出", {"context_length": len(ev.context)})
+        
         # Get global var
         retries = await ctx.get("retries")
         evaluation = await evaluate_database_output_step(
             self.llm, ev.question, ev.cypher, ev.context
         )
+        
+        # 记录评估结果
+        logger.log_workflow_step("步骤完成", "数据库输出评估完成", {"evaluation": evaluation})
+        
         if retries < self.max_retries and not evaluation == "Ok":
             await ctx.set("retries", retries + 1)
             return CorrectCypherEvent(
@@ -143,6 +179,12 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
     async def correct_cypher_step(
         self, ctx: Context, ev: CorrectCypherEvent
     ) -> ExecuteCypherEvent:
+        # 获取日志记录器
+        logger = get_llm_logger()
+        
+        # 记录步骤开始
+        logger.log_workflow_step("步骤开始", "开始修正Cypher查询", {"error": ev.error})
+        
         ctx.write_event_to_stream(
             SseEvent(
                 message=f"Error: {ev.error}",
@@ -156,10 +198,17 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
             ev.cypher,
             ev.error,
         )
+        
+        # 记录步骤完成
+        logger.log_workflow_step("步骤完成", "Cypher查询修正完成", {"corrected_cypher": results})
+        
         return ExecuteCypherEvent(question=ev.question, cypher=results)
 
     @step
     async def summarize_answer(self, ctx: Context, ev: SummarizeEvent) -> StopEvent:
+        # 获取日志记录器
+        logger = get_llm_logger()
+        
         retries = await ctx.get("retries")
         
         if retries > 0:
@@ -183,19 +232,33 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
                     success=False
                 )
 
-
         naive_final_answer_prompt = get_naive_final_answer_prompt()
-        gen = await self.llm.astream_chat(
-            naive_final_answer_prompt.format_messages(
-                context=ev.context, question=ev.question, cypher_query=ev.cypher
-            )
+        
+        # 准备发送给LLM的提示词
+        prompt_messages = naive_final_answer_prompt.format_messages(
+            context=ev.context, question=ev.question, cypher_query=ev.cypher
         )
+        
+        # 记录发送给LLM的提示词
+        context = {
+            "question": ev.question,
+            "cypher_query": ev.cypher,
+            "database_context": ev.context,
+            "evaluation": ev.evaluation
+        }
+        logger.log_prompt("生成最终答案", prompt_messages, context)
+        
+        # 发送给LLM并获取流式回应
+        gen = await self.llm.astream_chat(prompt_messages)
         final_answer = ""
         async for response in gen:
             final_answer += response.delta
             ctx.write_event_to_stream(
                 SseEvent(message=response.delta, label="Final answer")
             )
+        
+        # 记录LLM的完整回应
+        logger.log_response("生成最终答案", final_answer, context)
 
         stop_event = StopEvent(
             result={
