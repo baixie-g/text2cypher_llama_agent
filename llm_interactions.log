@@ -346,3 +346,26 @@ workflows.errors.WorkflowRuntimeError: Error in step 'generate_cypher': string i
 2025-08-01 19:06:14,506 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
 2025-08-01 19:06:29,828 - LLM_Logger - INFO - LLM交互 #2 - 生成最终答案(简单流程) - 回应已接收
 2025-08-01 19:06:29,828 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
+2025-08-05 17:12:26,848 - neo4j.pool - WARNING - Transaction failed and will be retried in 1.0874141891365612s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-05 17:12:27,937 - neo4j.pool - WARNING - Transaction failed and will be retried in 1.6449651035814266s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-05 17:12:29,584 - neo4j.pool - WARNING - Transaction failed and will be retried in 3.424149529536467s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-05 17:12:33,012 - neo4j.pool - WARNING - Transaction failed and will be retried in 8.773845409379636s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-05 17:12:41,795 - neo4j.pool - WARNING - Transaction failed and will be retried in 15.347221530352058s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-05 17:12:57,146 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:17:09,456 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:18:52,341 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:19:32,109 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:19:52,918 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:22:12,594 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 17:22:13,970 - LLM_Logger - INFO - LLM交互 #1 - 生成Cypher查询 - 提示词已发送
+2025-08-05 17:22:27,776 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 17:22:27,778 - LLM_Logger - INFO - LLM交互 #1 - 生成Cypher查询 - 回应已接收
+2025-08-05 17:22:27,867 - LLM_Logger - INFO - LLM交互 #2 - 生成最终答案(简单流程) - 提示词已发送
+2025-08-05 17:22:30,776 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 17:22:40,677 - LLM_Logger - INFO - LLM交互 #2 - 生成最终答案(简单流程) - 回应已接收
+2025-08-05 17:22:40,678 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
