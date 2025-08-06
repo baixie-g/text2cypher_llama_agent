@@ -54,6 +54,7 @@ class NaiveText2CypherFlow(Workflow):
     @step
     async def generate_cypher(self, ctx: Context, ev: StartEvent) -> ExecuteCypherEvent:
         question = ev.input
+        prompt_config = getattr(ev, 'prompt_config', None)
 
         fewshot_examples = self.fewshot_retriever(question, self.db_name)
 
@@ -62,6 +63,7 @@ class NaiveText2CypherFlow(Workflow):
             self.graph_store,
             question,
             fewshot_examples,
+            prompt_config=prompt_config
         )
 
         ctx.write_event_to_stream(
@@ -99,7 +101,10 @@ class NaiveText2CypherFlow(Workflow):
         # 获取日志记录器
         logger = get_llm_logger()
         
-        naive_final_answer_prompt = get_naive_final_answer_prompt()
+        # 从上下文获取prompt_config
+        prompt_config = getattr(ctx, 'prompt_config', None)
+        
+        naive_final_answer_prompt = get_naive_final_answer_prompt(prompt_config=prompt_config)
         
         # 准备发送给LLM的提示词
         prompt_messages = naive_final_answer_prompt.format_messages(

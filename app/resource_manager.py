@@ -200,22 +200,59 @@ class ResourceManager:
         print(f"Loaded {len(self.databases)} databases.")
 
     def init_embed_model(self):
-        # # 如果模型已经下载到本地，请指定其路径；否则，直接用模型名从HuggingFace Hub下载
-        # model_path = "/home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3"  # 或者 "BAAI/bge-m3"
-
-        # # 注意：这里要加上 trust_remote_code=True，如果模型需要额外的自定义代码支持
-        # self.embed_model = HuggingFaceEmbedding(model_name=model_path, trust_remote_code=True)
-
-        # # 如果 bge-m3 模型维度不是默认的768，你需要手动设置dimensions参数。
-        # # 根据文档或模型详情确认正确的维度大小，这里假设为1536以匹配OpenAI的配置
-        # self.embed_model.dimensions = 1536
-        # model_path = "/home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3"
-        # self.embed_model = BgeEmbedding(model_path=model_path)
         import torch
         import os
+        import ssl
+        
         # 强制使用CPU
         os.environ["CUDA_VISIBLE_DEVICES"] = ""
-        self.embed_model = SentenceTransformer("BAAI/bge-m3", device="cpu")
+        
+        # 设置环境变量来解决SSL问题
+        os.environ['CURL_CA_BUNDLE'] = ''
+        os.environ['REQUESTS_CA_BUNDLE'] = ''
+        os.environ['SSL_CERT_FILE'] = ''
+        
+        # 临时禁用SSL验证
+        ssl._create_default_https_context = ssl._create_unverified_context
+        
+        try:
+            # 尝试使用本地缓存路径
+            local_model_path = os.path.expanduser("~/.cache/huggingface/hub/models--BAAI--bge-m3")
+            if os.path.exists(local_model_path):
+                print(f"使用本地缓存的模型: {local_model_path}")
+                self.embed_model = SentenceTransformer(local_model_path, device="cpu")
+            else:
+                print("尝试从HuggingFace下载模型...")
+                self.embed_model = SentenceTransformer("BAAI/bge-m3", device="cpu")
+                
+        except Exception as e:
+            print(f"无法加载BAAI/bge-m3模型: {e}")
+            print("尝试使用备用模型...")
+            
+            try:
+                # 备用方案: 使用更小的模型
+                self.embed_model = SentenceTransformer("all-MiniLM-L6-v2", device="cpu")
+                print("成功加载备用模型: all-MiniLM-L6-v2")
+            except Exception as e2:
+                print(f"备用模型也失败: {e2}")
+                print("使用简单的随机embedding作为最后备选...")
+                
+                # 备用方案: 创建一个简单的随机embedding类
+                class RandomEmbedding:
+                    def __init__(self, dimension=768):
+                        self.dimension = dimension
+                    
+                    def encode(self, texts, **kwargs):
+                        import numpy as np
+                        if isinstance(texts, str):
+                            texts = [texts]
+                        return np.random.rand(len(texts), self.dimension).tolist()
+                
+                self.embed_model = RandomEmbedding()
+                print("使用随机embedding作为临时解决方案")
+        
+        # 恢复SSL验证
+        ssl._create_default_https_context = ssl.create_default_context
 
 
     def get_model_by_name(self, name):

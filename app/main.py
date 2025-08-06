@@ -14,6 +14,8 @@ from app.resource_manager import ResourceManager
 from app.settings import WORKFLOW_MAP
 from app.utils import urlx_for
 from app.api_routes import router as api_router
+from app.prompt_routes import router as prompt_router
+from app.prompt_manager import PromptManager
 
 load_dotenv()
 
@@ -44,6 +46,7 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 app.include_router(api_router)
 
 resource_manager = ResourceManager()
+prompt_manager = PromptManager()  # 初始化提示词管理器
 
 
 @app.get("/", response_class=HTMLResponse)

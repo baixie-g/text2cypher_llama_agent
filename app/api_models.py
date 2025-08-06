@@ -9,6 +9,13 @@ class WorkflowType(str, Enum):
     NAIVE_TEXT2CYPHER_WITH_RETRY = "naive_text2cypher_with_1_retry"
 
 
+class PromptConfig(BaseModel):
+    """提示词配置模型，用于工作流执行时指定使用的模板"""
+    system_template: Optional[str] = Field(None, description="系统提示词模板ID")
+    user_template: Optional[str] = Field(None, description="用户提示词模板ID")
+    assistant_template: Optional[str] = Field(None, description="助手提示词模板ID")
+
+
 class DatabaseStatus(str, Enum):
     CONNECTED = "connected"
     DISCONNECTED = "disconnected"
@@ -72,6 +79,7 @@ class WorkflowExecuteRequest(BaseModel):
     input_text: str = Field(..., description="输入文本")
     context: Optional[Dict[str, Any]] = Field(None, description="额外上下文信息")
     timeout: Optional[int] = Field(60, description="超时时间（秒）")
+    prompt_config: Optional[PromptConfig] = Field(None, description="提示词配置")
 
 
 # 工作流执行响应模型

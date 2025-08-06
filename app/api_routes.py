@@ -16,9 +16,13 @@ from app.api_models import (
 from app.resource_manager import ResourceManager
 from app.settings import WORKFLOW_MAP
 from app.workflow_service import WorkflowService
+from app.prompt_routes import router as prompt_router
 
 # 创建路由器
 router = APIRouter(prefix="/api/v1", tags=["Text2Cypher API"])
+
+# 包含提示词管理路由
+router.include_router(prompt_router)
 
 # 全局变量
 resource_manager = None
@@ -286,7 +290,8 @@ async def execute_workflow(request: WorkflowExecuteRequest):
             workflow_type=request.workflow_type.value,
             input_text=request.input_text,
             context=request.context or {},
-            timeout=request.timeout
+            timeout=request.timeout,
+            prompt_config=request.prompt_config.dict() if request.prompt_config else None
         )
         
         execution_time = time.time() - start_time
@@ -332,7 +337,8 @@ async def execute_workflow_stream(request: WorkflowExecuteRequest):
                 workflow_type=request.workflow_type.value,
                 input_text=request.input_text,
                 context=request.context or {},
-                timeout=request.timeout
+                timeout=request.timeout,
+                prompt_config=request.prompt_config.dict() if request.prompt_config else None
             ):
                 yield f"data: {json.dumps(event)}\n\n"
         except Exception as e:

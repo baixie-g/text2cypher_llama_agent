@@ -1,8 +1,13 @@
 from typing import List, Optional
 
 from llama_index.core import ChatPromptTemplate
+from app.prompt_service import PromptService
+from app.prompt_models import PromptType
+from app.api_models import PromptConfig
 from pydantic import BaseModel, Field
 
+# 注意：此硬编码提示词已被迁移到提示词管理系统
+# 请使用 PromptService 获取提示词模板
 INFORMATION_CHECK_SYSTEM_TEMPLATE = """You are an expert assistant that evaluates whether a set of subqueries, their results, any existing condensed information, and the current query plan provide enough details to answer a given question. Your task is to:
 
 1. Analyze if the available information is sufficient to answer the original question: "{original_question}".
@@ -58,6 +63,8 @@ INFORMATION_CHECK_SYSTEM_TEMPLATE = """You are an expert assistant that evaluate
    - Explicitly document unsolvable tasks if critical information is missing.
 """
 
+# 注意：此硬编码提示词已被迁移到提示词管理系统
+# 请使用 PromptService 获取提示词模板
 INFORMATION_CHECK_USER_TEMPLATE = """
 Subqueries and their results:
 {subqueries}
@@ -112,9 +119,23 @@ def format_subqueries_for_prompt(information_checks: list) -> str:
 async def information_check_step(
     llm, subquery_events, original_question, dynamic_notebook, plan
 ):
-    information_check_msgs = [
-        ("system", INFORMATION_CHECK_SYSTEM_TEMPLATE),
-        ("user", INFORMATION_CHECK_USER_TEMPLATE),
+    # 获取提示词服务
+    prompt_service = PromptService()
+    
+    # 从提示词管理系统获取提示词
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+        system_prompt_type=PromptType.ITERATIVE_INFORMATION_CHECK_SYSTEM,
+        user_prompt_type=PromptType.ITERATIVE_INFORMATION_CHECK_USER if "iterative_information_check_user" != "None" else None,
+        prompt_config=prompt_config
+    )
+    
+    # 如果获取失败，抛出异常
+    if not system_prompt:
+        raise ValueError("无法从提示词管理系统获取必要的提示词模板")
+    
+    msgs = [
+        ("system", system_prompt),
+        ("user", user_prompt),
     ]
 
     information_check_prompt = ChatPromptTemplate.from_messages(information_check_msgs)

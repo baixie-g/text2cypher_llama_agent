@@ -1,7 +1,10 @@
-from typing import List
+from typing import List, Optional
 
 from llama_index.core import ChatPromptTemplate
 from pydantic import BaseModel, Field
+from app.prompt_service import PromptService
+from app.prompt_models import PromptType
+from app.api_models import PromptConfig
 
 
 class SubqueriesOutput(BaseModel):
@@ -69,9 +72,23 @@ Remember:
 - Prioritize independent queries first"""
 
 
-async def initial_plan_step(llm, question):
+async def initial_plan_step(llm, question, prompt_config: Optional[PromptConfig] = None):
+    # 获取提示词服务
+    prompt_service = PromptService()
+    
+    # 从提示词管理系统获取提示词
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+        system_prompt_type=PromptType.ITERATIVE_INITIAL_PLAN_SYSTEM,
+        user_prompt_type=PromptType.ITERATIVE_INITIAL_PLAN_USER,
+        prompt_config=prompt_config
+    )
+    
+    # 如果获取失败，抛出异常
+    if not system_prompt:
+        raise ValueError("无法从提示词管理系统获取必要的提示词模板")
+    
     query_decompose_msgs = [
-        ("system", SUBQUERIES_SYSTEM_TEMPLATE),
+        ("system", system_prompt),
         ("user", "{question}"),
     ]
 

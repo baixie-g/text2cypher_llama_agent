@@ -369,3 +369,319 @@ Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reas
 2025-08-05 17:22:30,776 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
 2025-08-05 17:22:40,677 - LLM_Logger - INFO - LLM交互 #2 - 生成最终答案(简单流程) - 回应已接收
 2025-08-05 17:22:40,678 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
+2025-08-05 22:21:53,521 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:22:14,153 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:23:20,403 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:23:40,337 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:27:48,654 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:28:20,934 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:33:43,906 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:34:14,263 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:35:53,238 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:40:01,238 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:40:16,538 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:42:29,572 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:55:41,615 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 22:57:07,796 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 23:13:08,440 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 23:13:27,101 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 23:15:09,881 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 23:15:28,152 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 23:15:44,238 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 23:17:41,133 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 15:19:36,818 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 15:19:53,242 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 15:20:09,381 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 15:49:01,441 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:10:49,797 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:11:59,809 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:15:10,363 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:15:20,366 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-05 16:15:48,379 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:15:58,383 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-05 16:17:20,977 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:17:44,032 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:17:59,997 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:21:40,282 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: text2cypher_with_1_retry_and_output_check
+2025-08-05 16:21:40,282 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: text2cypher_with_1_retry_and_output_check
+2025-08-05 16:29:31,993 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:29:32,847 - asyncio - ERROR - Exception in callback functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x77be14e29cf0>, span_id='Workflow.run-d1707aba-797c-4b0a-a127-690005e2a924', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': 'chinese-system-template-001', 'user_template': 'chinese-user-template-001', 'assistant_template': None}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x77bc1edb9f60>, context=<_contextvars.Context object at 0x77bcb1511dc0>)
+handle: <Handle functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x77be14e29cf0>, span_id='Workflow.run-d1707aba-797c-4b0a-a127-690005e2a924', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': 'chinese-system-template-001', 'user_template': 'chinese-user-template-001', 'assistant_template': None}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x77bc1edb9f60>, context=<_contextvars.Context object at 0x77bcb1511dc0>)>
+Traceback (most recent call last):
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 687, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 365, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/naive_text2cypher.py", line 60, in generate_cypher
+    cypher_query = await generate_cypher_step(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/steps/naive_text2cypher/generate_cypher.py", line 162, in generate_cypher_step
+    system_prompt_type=PromptType.NAIVE_GENERATE_CYPHER_SYSTEM,
+NameError: name 'PromptType' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 290, in handle_future_result
+    raise exception
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/workflow.py", line 416, in _run_workflow
+    raise exception_raised
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 696, in _step_worker
+    raise WorkflowRuntimeError(
+workflows.errors.WorkflowRuntimeError: Error in step 'generate_cypher': name 'PromptType' is not defined
+2025-08-05 16:29:32,851 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:30:50,787 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:31:11,158 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:31:31,750 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:31:53,566 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:32:13,218 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:32:32,651 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:32:51,694 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:33:55,746 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:34:15,390 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:35:09,038 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:42:45,129 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:43:06,172 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:43:25,962 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:43:45,873 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:44:00,573 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:44:09,485 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:44:09,485 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:44:09,487 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:44:09,487 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:45:20,008 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:45:40,080 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:45:54,679 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:46:03,269 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:46:03,270 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:46:03,273 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:46:03,273 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:46:21,638 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:46:42,115 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:46:56,338 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:47:04,281 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:47:04,822 - asyncio - ERROR - Exception in callback functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x75f0a4f4a9e0>, span_id='Workflow.run-8f09f0b3-69e5-40b2-bc0f-059960629645', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': 'chinese-system-template-001', 'user_template': 'chinese-user-template-001', 'assistant_template': 'chinese-summarize-system-template-001'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x75f0a4f53400>, context=<_contextvars.Context object at 0x75f0a7ddef80>)
+handle: <Handle functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x75f0a4f4a9e0>, span_id='Workflow.run-8f09f0b3-69e5-40b2-bc0f-059960629645', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': 'chinese-system-template-001', 'user_template': 'chinese-user-template-001', 'assistant_template': 'chinese-summarize-system-template-001'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x75f0a4f53400>, context=<_contextvars.Context object at 0x75f0a7ddef80>)>
+Traceback (most recent call last):
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 687, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 365, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/naive_text2cypher.py", line 61, in generate_cypher
+    cypher_query = await generate_cypher_step(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/steps/naive_text2cypher/generate_cypher.py", line 162, in generate_cypher_step
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+TypeError: PromptService.get_workflow_step_prompts() got an unexpected keyword argument 'system_prompt_type'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 290, in handle_future_result
+    raise exception
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/workflow.py", line 416, in _run_workflow
+    raise exception_raised
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 696, in _step_worker
+    raise WorkflowRuntimeError(
+workflows.errors.WorkflowRuntimeError: Error in step 'generate_cypher': PromptService.get_workflow_step_prompts() got an unexpected keyword argument 'system_prompt_type'
+2025-08-05 16:47:04,824 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:47:04,828 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:47:04,941 - asyncio - ERROR - Exception in callback functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x75f0984051b0>, span_id='Workflow.run-0a215c65-53e7-440b-b3dd-4873744b59e6', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': '默认Naive生成Cypher系统提示词', 'user_template': '默认Naive生成Cypher用户提示词', 'assistant_template': 'Naive总结答案系统提示词'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x75f007dd9270>, context=<_contextvars.Context object at 0x75f0a468b6c0>)
+handle: <Handle functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x75f0984051b0>, span_id='Workflow.run-0a215c65-53e7-440b-b3dd-4873744b59e6', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': '默认Naive生成Cypher系统提示词', 'user_template': '默认Naive生成Cypher用户提示词', 'assistant_template': 'Naive总结答案系统提示词'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x75f007dd9270>, context=<_contextvars.Context object at 0x75f0a468b6c0>)>
+Traceback (most recent call last):
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 687, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 365, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/naive_text2cypher.py", line 61, in generate_cypher
+    cypher_query = await generate_cypher_step(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/steps/naive_text2cypher/generate_cypher.py", line 162, in generate_cypher_step
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+TypeError: PromptService.get_workflow_step_prompts() got an unexpected keyword argument 'system_prompt_type'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 290, in handle_future_result
+    raise exception
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/workflow.py", line 416, in _run_workflow
+    raise exception_raised
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 696, in _step_worker
+    raise WorkflowRuntimeError(
+workflows.errors.WorkflowRuntimeError: Error in step 'generate_cypher': PromptService.get_workflow_step_prompts() got an unexpected keyword argument 'system_prompt_type'
+2025-08-05 16:47:04,942 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:47:21,763 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:47:40,685 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:48:02,175 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:48:10,457 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:48:10,577 - asyncio - ERROR - Exception in callback functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x75dc6da21e10>, span_id='Workflow.run-686a6f8d-1a6a-4eab-b00d-b186d029acf5', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': 'chinese-system-template-001', 'user_template': 'chinese-user-template-001', 'assistant_template': 'chinese-summarize-system-template-001'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x75dc6d99ed10>, context=<_contextvars.Context object at 0x75dc6cfec040>)
+handle: <Handle functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x75dc6da21e10>, span_id='Workflow.run-686a6f8d-1a6a-4eab-b00d-b186d029acf5', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': 'chinese-system-template-001', 'user_template': 'chinese-user-template-001', 'assistant_template': 'chinese-summarize-system-template-001'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x75dc6d99ed10>, context=<_contextvars.Context object at 0x75dc6cfec040>)>
+Traceback (most recent call last):
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 687, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 365, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/naive_text2cypher.py", line 61, in generate_cypher
+    cypher_query = await generate_cypher_step(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/steps/naive_text2cypher/generate_cypher.py", line 162, in generate_cypher_step
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/app/prompt_service.py", line 156, in get_workflow_step_prompts
+    system_prompt = self.get_prompt_template(system_type, prompt_config) if system_type else None
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/app/prompt_service.py", line 33, in get_prompt_template
+    template_id = prompt_config.system_template
+AttributeError: 'dict' object has no attribute 'system_template'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 290, in handle_future_result
+    raise exception
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/workflow.py", line 416, in _run_workflow
+    raise exception_raised
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 696, in _step_worker
+    raise WorkflowRuntimeError(
+workflows.errors.WorkflowRuntimeError: Error in step 'generate_cypher': 'dict' object has no attribute 'system_template'
+2025-08-05 16:48:10,580 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:48:10,583 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:48:10,679 - asyncio - ERROR - Exception in callback functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x75dbd374dd80>, span_id='Workflow.run-dc13ebdb-2cfb-4f1d-b7bf-8fc04753f609', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': '默认Naive生成Cypher系统提示词', 'user_template': '默认Naive生成Cypher用户提示词', 'assistant_template': 'Naive总结答案系统提示词'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x75dbd0899300>, context=<_contextvars.Context object at 0x75dc6d1532c0>)
+handle: <Handle functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x75dbd374dd80>, span_id='Workflow.run-dc13ebdb-2cfb-4f1d-b7bf-8fc04753f609', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': '默认Naive生成Cypher系统提示词', 'user_template': '默认Naive生成Cypher用户提示词', 'assistant_template': 'Naive总结答案系统提示词'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x75dbd0899300>, context=<_contextvars.Context object at 0x75dc6d1532c0>)>
+Traceback (most recent call last):
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 687, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 365, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/naive_text2cypher.py", line 61, in generate_cypher
+    cypher_query = await generate_cypher_step(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/steps/naive_text2cypher/generate_cypher.py", line 162, in generate_cypher_step
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/app/prompt_service.py", line 156, in get_workflow_step_prompts
+    system_prompt = self.get_prompt_template(system_type, prompt_config) if system_type else None
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/app/prompt_service.py", line 33, in get_prompt_template
+    template_id = prompt_config.system_template
+AttributeError: 'dict' object has no attribute 'system_template'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 290, in handle_future_result
+    raise exception
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/workflow.py", line 416, in _run_workflow
+    raise exception_raised
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 696, in _step_worker
+    raise WorkflowRuntimeError(
+workflows.errors.WorkflowRuntimeError: Error in step 'generate_cypher': 'dict' object has no attribute 'system_template'
+2025-08-05 16:48:10,681 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:48:39,801 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:49:00,114 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:49:21,028 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:49:35,908 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:49:44,427 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:49:44,533 - asyncio - ERROR - Exception in callback functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x7f07e0135fc0>, span_id='Workflow.run-72b5b5bf-207d-415f-a4a6-17ed5200178d', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': 'chinese-system-template-001', 'user_template': 'chinese-user-template-001', 'assistant_template': 'chinese-summarize-system-template-001'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x7f07e00b1780>, context=<_contextvars.Context object at 0x7f07e1fab700>)
+handle: <Handle functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x7f07e0135fc0>, span_id='Workflow.run-72b5b5bf-207d-415f-a4a6-17ed5200178d', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': 'chinese-system-template-001', 'user_template': 'chinese-user-template-001', 'assistant_template': 'chinese-summarize-system-template-001'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x7f07e00b1780>, context=<_contextvars.Context object at 0x7f07e1fab700>)>
+Traceback (most recent call last):
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 687, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 365, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/naive_text2cypher.py", line 61, in generate_cypher
+    cypher_query = await generate_cypher_step(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/steps/naive_text2cypher/generate_cypher.py", line 163, in generate_cypher_step
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/app/prompt_service.py", line 156, in get_workflow_step_prompts
+    system_prompt = self.get_prompt_template(system_type, prompt_config) if system_type else None
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/app/prompt_service.py", line 33, in get_prompt_template
+    template_id = prompt_config.system_template
+AttributeError: 'dict' object has no attribute 'system_template'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 290, in handle_future_result
+    raise exception
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/workflow.py", line 416, in _run_workflow
+    raise exception_raised
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 696, in _step_worker
+    raise WorkflowRuntimeError(
+workflows.errors.WorkflowRuntimeError: Error in step 'generate_cypher': 'dict' object has no attribute 'system_template'
+2025-08-05 16:49:44,534 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:49:44,538 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:49:44,632 - asyncio - ERROR - Exception in callback functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x7f0746dc9510>, span_id='Workflow.run-07416e1b-52eb-4e7f-ae2f-62301be88094', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': '默认Naive生成Cypher系统提示词', 'user_template': '默认Naive生成Cypher用户提示词', 'assistant_template': 'Naive总结答案系统提示词'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x7f0742efdd20>, context=<_contextvars.Context object at 0x7f07d567c940>)
+handle: <Handle functools.partial(<function Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result at 0x7f0746dc9510>, span_id='Workflow.run-07416e1b-52eb-4e7f-ae2f-62301be88094', bound_args=<BoundArguments (kwargs={'input': '小李和小华有什么关系', 'prompt_config': {'system_template': '默认Naive生成Cypher系统提示词', 'user_template': '默认Naive生成Cypher用户提示词', 'assistant_template': 'Naive总结答案系统提示词'}})>, instance=<cypher_workflows.naive_text2cypher.NaiveText2CypherFlow object at 0x7f0742efdd20>, context=<_contextvars.Context object at 0x7f07d567c940>)>
+Traceback (most recent call last):
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 687, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 365, in async_wrapper
+    result = await func(*args, **kwargs)
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/naive_text2cypher.py", line 61, in generate_cypher
+    cypher_query = await generate_cypher_step(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/cypher_workflows/steps/naive_text2cypher/generate_cypher.py", line 163, in generate_cypher_step
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/app/prompt_service.py", line 156, in get_workflow_step_prompts
+    system_prompt = self.get_prompt_template(system_type, prompt_config) if system_type else None
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/app/prompt_service.py", line 33, in get_prompt_template
+    template_id = prompt_config.system_template
+AttributeError: 'dict' object has no attribute 'system_template'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/llama_index_instrumentation/dispatcher.py", line 290, in handle_future_result
+    raise exception
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/workflow.py", line 416, in _run_workflow
+    raise exception_raised
+  File "/home/g0j/桌面/new/text2cypher_llama_agent/venv/lib/python3.10/site-packages/workflows/context/context.py", line 696, in _step_worker
+    raise WorkflowRuntimeError(
+workflows.errors.WorkflowRuntimeError: Error in step 'generate_cypher': 'dict' object has no attribute 'system_template'
+2025-08-05 16:49:44,633 - LLM_Logger - INFO - 工作流步骤: 工作流错误 - 工作流执行失败: naive_text2cypher
+2025-08-05 16:51:24,423 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:51:39,106 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:51:48,743 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:51:48,891 - LLM_Logger - INFO - LLM交互 #1 - 生成Cypher查询 - 提示词已发送
+2025-08-05 16:51:54,646 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 16:51:54,648 - LLM_Logger - INFO - LLM交互 #1 - 生成Cypher查询 - 回应已接收
+2025-08-05 16:51:55,435 - LLM_Logger - INFO - LLM交互 #2 - 生成最终答案(简单流程) - 提示词已发送
+2025-08-05 16:51:56,050 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 16:52:07,565 - LLM_Logger - INFO - LLM交互 #2 - 生成最终答案(简单流程) - 回应已接收
+2025-08-05 16:52:07,567 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
+2025-08-05 16:52:07,572 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-05 16:52:07,701 - LLM_Logger - INFO - LLM交互 #3 - 生成Cypher查询 - 提示词已发送
+2025-08-05 16:52:17,725 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 16:52:17,726 - LLM_Logger - INFO - LLM交互 #3 - 生成Cypher查询 - 回应已接收
+2025-08-05 16:52:17,940 - LLM_Logger - INFO - LLM交互 #4 - 生成最终答案(简单流程) - 提示词已发送
+2025-08-05 16:52:18,404 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-05 16:52:27,851 - LLM_Logger - INFO - LLM交互 #4 - 生成最终答案(简单流程) - 回应已接收
+2025-08-05 16:52:27,852 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
+2025-08-05 16:52:47,264 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:52:52,393 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-05 16:58:20,927 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:58:26,029 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-05 16:59:35,667 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 16:59:40,771 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-05 17:07:06,448 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:07:11,551 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-05 17:08:49,471 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:08:54,575 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-05 17:28:04,262 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:28:09,366 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-05 17:38:03,826 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-08-05 17:38:08,929 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name BAAI/bge-m3. Creating a new one with mean pooling.
+2025-08-06 00:33:47,136 - neo4j.pool - WARNING - Transaction failed and will be retried in 1.1851302071233862s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-06 00:33:48,323 - neo4j.pool - WARNING - Transaction failed and will be retried in 2.0680158223580705s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-06 00:33:50,393 - neo4j.pool - WARNING - Transaction failed and will be retried in 3.672230042458696s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-06 00:33:54,067 - neo4j.pool - WARNING - Transaction failed and will be retried in 6.516778069421682s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-06 00:34:00,587 - neo4j.pool - WARNING - Transaction failed and will be retried in 15.321587763570914s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-06 00:34:15,915 - neo4j.pool - WARNING - Transaction failed and will be retried in 30.595298945441932s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-06 00:34:46,550 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-06 00:34:46,550 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with mean pooling.
+2025-08-06 00:34:46,551 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2

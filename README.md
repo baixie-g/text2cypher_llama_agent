@@ -38,6 +38,10 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```bash
 uv sync
 ```
+### 启动服务
+```bash
+python -m uvicorn app.main:app --host localhost --port 8001 --reload
+```
 
 ### Run Development Server
 
@@ -45,7 +49,7 @@ Start the FastAPI server:
 ```bash
 uv run fastapi dev
 ```
-
+此处环境待整改
 Open the `localhost:8000`
 
 ## 📊 Benchmarking

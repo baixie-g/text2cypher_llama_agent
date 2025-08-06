@@ -1,4 +1,5 @@
 import sys
+from typing import Optional
 from llama_index.core import ChatPromptTemplate
 from cypher_workflows.shared.utils import get_neo4j_schema_str
 import os
@@ -8,11 +9,18 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))))
 from app.utils import get_llm_logger, get_optimized_schema
+from app.prompt_service import PromptService
+from app.prompt_models import PromptType
+from app.api_models import PromptConfig
 
+# 注意：此硬编码提示词已被迁移到提示词管理系统
+# 请使用 PromptService 获取提示词模板
 CORRECT_CYPHER_SYSTEM_TEMPLATE = """You are a Cypher expert reviewing a statement written by a junior developer.
 You need to correct the Cypher statement based on the provided errors. No pre-amble."
 Do not wrap the response in any backticks or anything else. Respond with a Cypher statement only!"""
 
+# 注意：此硬编码提示词已被迁移到提示词管理系统
+# 请使用 PromptService 获取提示词模板
 CORRECT_CYPHER_USER_TEMPLATE = """Check for invalid syntax or semantics and return a corrected Cypher statement.
 
 Schema:
@@ -36,7 +44,7 @@ The errors are:
 Corrected Cypher statement: """
 
 
-async def correct_cypher_step(llm, graph_store, subquery, cypher, errors):
+async def correct_cypher_step(llm, graph_store, subquery, cypher, errors, prompt_config: Optional[PromptConfig] = None):
     # 获取日志记录器
     logger = get_llm_logger()
     
@@ -44,65 +52,23 @@ async def correct_cypher_step(llm, graph_store, subquery, cypher, errors):
     schema = get_optimized_schema(graph_store, exclude_types=["Actor", "Director"])
     print(f"-> 成功获取优化corrector schema为: {schema}")
     
-    # schema = get_neo4j_schema_str(graph_store, exclude_types=["Actor", "Director"])
-    # schema = graph_store.get_schema_str(exclude_types=["Actor", "Director"])
-    # print(f"-> 成功获取 corrector schema 为: {schema}")
-    # schema = {
-    #     'metadata': {
-    #         'constraint': [],
-    #         'index': []
-    #     },
-    #     'node_props': {
-    #         'Check': ['type', 'aliases', 'name', 'definition'],
-    #         'Department': ['type', 'aliases', 'name', 'definition'],
-    #         'Disease': [
-    #             'attributes.cured_prob',
-    #             'definition',
-    #             'attributes.cure_department',
-    #             'type',
-    #             'attributes.cure_lasttime',
-    #             'attributes.cure_way',
-    #             'attributes.easy_get',
-    #             'attributes.cause',
-    #             'name',
-    #             'aliases',
-    #             'attributes.prevent'
-    #         ],
-    #         'Drug': ['definition', 'type', 'aliases', 'name'],
-    #         'Food': ['definition', 'type', 'aliases', 'name'],
-    #         'Producer': ['aliases', 'name', 'definition', 'type'],
-    #         'Symptom': ['type', 'aliases', 'name', 'definition']
-    #     },
-    #     'rel_props': {
-    #         'acompany_with': ['name'],
-    #         'belongs_to': ['name'],
-    #         'common_drug': ['name'],
-    #         'do_eat': ['name'],
-    #         'drugs_of': ['name'],
-    #         'has_symptom': ['name'],
-    #         'need_check': ['name'],
-    #         'no_eat': ['name'],
-    #         'recommand_drug': ['name'],
-    #         'recommand_eat': ['name']
-    #     },
-    #     'relationships': [
-    #         '(:Disease)-[:recommand_eat]->(:Food)',
-    #         '(:Disease)-[:no_eat]->(:Food)',
-    #         '(:Disease)-[:do_eat]->(:Food)',
-    #         '(:Department)-[:belongs_to]->(:Department)',
-    #         '(:Disease)-[:common_drug]->(:Drug)',
-    #         '(:Producer)-[:drugs_of]->(:Drug)',
-    #         '(:Disease)-[:recommand_drug]->(:Drug)',
-    #         '(:Disease)-[:need_check]->(:Check)',
-    #         '(:Disease)-[:has_symptom]->(:Symptom)',
-    #         '(:Disease)-[:acompany_with]->(:Disease)',
-    #         '(:Disease)-[:belongs_to]->(:Department)'
-    #     ]
-    # }
+    # 获取提示词服务
+    prompt_service = PromptService()
+    
+    # 从提示词管理系统获取提示词
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+        system_prompt_type=PromptType.NAIVE_CORRECT_CYPHER_SYSTEM,
+        user_prompt_type=PromptType.NAIVE_CORRECT_CYPHER_USER,
+        prompt_config=prompt_config
+    )
+    
+    # 如果获取失败，抛出异常
+    if not system_prompt or not user_prompt:
+        raise ValueError("无法从提示词管理系统获取必要的提示词模板")
 
     correct_cypher_messages = [
-        ("system", CORRECT_CYPHER_SYSTEM_TEMPLATE),
-        ("user", CORRECT_CYPHER_USER_TEMPLATE),
+        ("system", system_prompt),
+        ("user", user_prompt),
     ]
 
     correct_cypher_prompt = ChatPromptTemplate.from_messages(correct_cypher_messages)

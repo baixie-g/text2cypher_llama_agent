@@ -35,14 +35,14 @@ class Neo4jFewshotManager:
             embedding = embed_model.encode(question)
             if hasattr(embedding, 'tolist'):
                 embedding = embedding.tolist()
-            print(f"[DEBUG] 计算得到 embedding，长度: {len(embedding)}，前5项: {embedding[:5]}")
+            print(f"[DEBUG] 计算得到 embedding，长度: {len(embedding)}")
         except Exception as e:
             print(f"[ERROR] 计算 embedding 失败: {e}")
             return []
         cypher = '''MATCH (f:Fewshot)\nWHERE f.database = $database\nWITH f, vector.similarity.cosine(f.embedding, $embedding) AS score\nORDER BY score DESC LIMIT 7\nRETURN f.question AS question, f.cypher AS cypher'''
         param_map = {"embedding": embedding, "database": database}
-        print(f"[DEBUG] 查询Cypher: {cypher}")
-        print(f"[DEBUG] 查询参数: {param_map}")
+        # print(f"[DEBUG] 查询Cypher: {cypher}")
+        # print(f"[DEBUG] 查询参数: {param_map}")
         try:
             examples = self.graph_store.structured_query(
                 cypher,

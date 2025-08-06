@@ -1,9 +1,14 @@
 from typing import List, Optional
 
 from llama_index.core import ChatPromptTemplate
+from app.prompt_service import PromptService
+from app.prompt_models import PromptType
+from app.api_models import PromptConfig
 from neo4j.exceptions import CypherSyntaxError
 from pydantic import BaseModel, Field
 
+# 注意：此硬编码提示词已被迁移到提示词管理系统
+# 请使用 PromptService 获取提示词模板
 VALIDATE_CYPHER_SYSTEM_TEMPLATE = """You are a specialized parser focused on analyzing Cypher query statements to extract node property filters. Your task is to identify and extract properties used in WHERE clauses and pattern matching conditions, but only when they contain explicit literal values.
 
 For each Cypher statement, you should:
@@ -74,6 +79,8 @@ Example output 2:
 
 Note how property-to-property comparisons (f.salary = m.salary, m1.rating > m2.rating) are ignored in the output."""
 
+# 注意：此硬编码提示词已被迁移到提示词管理系统
+# 请使用 PromptService 获取提示词模板
 VALIDATE_CYPHER_USER_TEMPLATE = """Cypher statement: {cypher}"""
 
 
@@ -128,9 +135,23 @@ async def validate_cypher_step(
     # Skip mapping the values to the database, LLMs struggle with this tool output
     """
     # Use LLM for mapping for values
-    validate_cypher_msgs = [
-        ("system", VALIDATE_CYPHER_SYSTEM_TEMPLATE),
-        ("user", VALIDATE_CYPHER_USER_TEMPLATE),
+    # 获取提示词服务
+    prompt_service = PromptService()
+    
+    # 从提示词管理系统获取提示词
+    system_prompt, user_prompt = prompt_service.get_workflow_step_prompts(
+        system_prompt_type=PromptType.ITERATIVE_VALIDATE_CYPHER_SYSTEM,
+        user_prompt_type=PromptType.ITERATIVE_VALIDATE_CYPHER_USER if "iterative_validate_cypher_user" != "None" else None,
+        prompt_config=prompt_config
+    )
+    
+    # 如果获取失败，抛出异常
+    if not system_prompt:
+        raise ValueError("无法从提示词管理系统获取必要的提示词模板")
+    
+    msgs = [
+        ("system", system_prompt),
+        ("user", user_prompt),
     ]
     validate_cypher_prompt = ChatPromptTemplate.from_messages(validate_cypher_msgs)
     llm_output = await llm.as_structured_llm(ValidateCypherOutput).acomplete(

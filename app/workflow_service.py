@@ -21,7 +21,8 @@ class WorkflowService:
         workflow_type: str,
         input_text: str,
         context: Dict[str, Any] = None,
-        timeout: int = 60
+        timeout: int = 60,
+        prompt_config: Dict[str, Any] = None
     ) -> Any:
         """执行单个工作流"""
         # 获取日志记录器
@@ -61,6 +62,10 @@ class WorkflowService:
             
             # 添加输入文本到上下文
             context["input"] = input_text
+            
+            # 添加提示词配置到上下文
+            if prompt_config:
+                context["prompt_config"] = prompt_config
 
             # 创建工作流实例
             workflow_instance = workflow_class(
@@ -105,7 +110,8 @@ class WorkflowService:
         workflow_type: str,
         input_text: str,
         context: Dict[str, Any] = None,
-        timeout: int = 60
+        timeout: int = 60,
+        prompt_config: Dict[str, Any] = None
     ) -> AsyncGenerator[Dict[str, Any], None]:
         """流式执行工作流"""
         try:
@@ -129,6 +135,10 @@ class WorkflowService:
             
             # 添加输入文本到上下文
             context["input"] = input_text
+            
+            # 添加提示词配置到上下文
+            if prompt_config:
+                context["prompt_config"] = prompt_config
 
             # 创建工作流实例
             workflow_instance = workflow_class(
@@ -189,7 +199,8 @@ class WorkflowService:
                         workflow_type=request["workflow_type"],
                         input_text=request["input_text"],
                         context=request.get("context", {}),
-                        timeout=request.get("timeout", 60)
+                        timeout=request.get("timeout", 60),
+                        prompt_config=request.get("prompt_config")
                     )
                     
                     execution_time = (datetime.now() - start_time).total_seconds()
