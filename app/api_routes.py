@@ -43,6 +43,20 @@ def get_resource_manager():
     if resource_manager is None:
         resource_manager = ResourceManager()
     return resource_manager
+@router.post("/databases/refresh", response_model=BaseResponse)
+async def refresh_databases_from_nacos(payload: Dict[str, Any] | None = None):
+    """从 Nacos 重新拉取并注册数据库（仅 Neo4j 类型）
+    可在请求体中传入可选覆盖字段：server, username, password, bearer_token, namespace, group, data_id, auth_method
+    """
+    try:
+        rm = get_resource_manager()
+        before = len(rm.databases)
+        rm.load_databases_from_nacos(overrides=payload or {})
+        after = len(rm.databases)
+        return BaseResponse(success=True, message=f"Refreshed databases from Nacos: {before} -> {after}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Refresh databases failed: {str(e)}")
+
 
 
 def get_workflow_service():
@@ -218,6 +232,7 @@ async def get_available_databases():
                 uri = "bolt://localhost:7687"
             
             databases.append(DatabaseInfo(
+                id=db_info.get("id"),
                 name=name,
                 status=DatabaseStatus.CONNECTED,
                 uri=uri,
@@ -284,9 +299,21 @@ async def execute_workflow(request: WorkflowExecuteRequest):
             execution_stats["llm_usage"].get(request.llm_name, 0) + 1
         
         ws = get_workflow_service()
+        # 解析数据库：优先使用 database_id，其次 database_name
+        rm = get_resource_manager()
+        chosen_db_name = None
+        if request.database_id:
+            chosen_db_name = rm.get_database_name_by_id(request.database_id)
+            if not chosen_db_name:
+                raise HTTPException(status_code=404, detail=f"Database id '{request.database_id}' not found")
+        else:
+            if not request.database_name:
+                raise HTTPException(status_code=400, detail="Either database_id or database_name must be provided")
+            chosen_db_name = request.database_name
+
         result = await ws.execute_workflow(
             llm_name=request.llm_name,
-            database_name=request.database_name,
+            database_name=chosen_db_name,
             workflow_type=request.workflow_type.value,
             input_text=request.input_text,
             context=request.context or {},
@@ -331,9 +358,20 @@ async def execute_workflow_stream(request: WorkflowExecuteRequest):
     async def generate():
         try:
             ws = get_workflow_service()
+            rm = get_resource_manager()
+            chosen_db_name = None
+            if request.database_id:
+                chosen_db_name = rm.get_database_name_by_id(request.database_id)
+                if not chosen_db_name:
+                    raise HTTPException(status_code=404, detail=f"Database id '{request.database_id}' not found")
+            else:
+                if not request.database_name:
+                    raise HTTPException(status_code=400, detail="Either database_id or database_name must be provided")
+                chosen_db_name = request.database_name
+
             async for event in ws.execute_workflow_stream(
                 llm_name=request.llm_name,
-                database_name=request.database_name,
+                database_name=chosen_db_name,
                 workflow_type=request.workflow_type.value,
                 input_text=request.input_text,
                 context=request.context or {},

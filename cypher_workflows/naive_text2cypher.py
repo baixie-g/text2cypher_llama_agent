@@ -80,6 +80,7 @@ class NaiveText2CypherFlow(Workflow):
     async def execute_query(
         self, ctx: Context, ev: ExecuteCypherEvent
     ) -> SummarizeEvent:
+        print(f"[INFO] 即将查询数据库: {self.db_name}")
         print(f"[DEBUG] 执行 Cypher 查询: {ev.cypher}")
         try:
             database_output = str(self.graph_store.structured_query(ev.cypher)[:100])

@@ -685,3 +685,430 @@ Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reas
 2025-08-06 00:34:46,550 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
 2025-08-06 00:34:46,550 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with mean pooling.
 2025-08-06 00:34:46,551 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 15:59:06,835 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 15:59:06,835 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 15:59:06,836 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 15:59:14,088 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 15:59:14,089 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 15:59:14,089 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:00:54,280 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:00:54,280 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:00:54,280 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:03:46,826 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:03:46,827 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:03:46,827 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:03:46,829 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:03:46,829 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:03:46,829 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:03:46,863 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:03:46,863 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:03:46,863 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:04:08,400 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:04:08,401 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:04:08,401 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:04:08,599 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:04:08,599 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:04:08,599 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:04:10,126 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:04:10,126 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:04:10,126 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:09:05,561 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:09:05,561 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:09:05,561 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:13:04,354 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:13:04,354 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:13:04,354 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:13:04,856 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:13:04,857 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:13:04,857 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:13:05,126 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:13:05,126 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:13:05,126 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:13:40,233 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:13:40,233 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:13:40,233 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:13:40,363 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:13:40,363 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:13:40,364 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:13:40,772 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:13:40,772 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:13:40,773 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:14:12,228 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:14:12,229 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:14:12,229 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:18:21,995 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:18:21,995 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:18:21,995 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:18:21,999 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:18:22,000 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:18:22,000 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:18:22,339 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:18:22,339 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:18:22,339 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:19:13,322 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:19:13,322 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:19:13,322 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:19:15,164 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:19:15,165 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:19:15,165 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:19:15,419 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:19:15,419 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:19:15,420 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:19:32,269 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:19:32,269 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:19:32,269 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:19:32,750 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:19:32,750 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:19:32,751 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:19:33,128 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:19:33,128 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:19:33,129 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:20:00,491 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:20:00,492 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:20:00,492 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:24:54,156 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:24:54,156 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:24:54,156 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:24:54,263 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:24:54,263 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:24:54,263 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:24:55,987 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:24:55,987 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:24:55,987 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:26:33,500 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:26:33,501 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:26:33,501 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:26:34,311 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:26:34,312 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:26:34,312 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:26:35,147 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:26:35,147 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:26:35,148 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:30:30,257 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:30:30,258 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:30:30,258 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:31:44,558 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:31:44,559 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:31:44,559 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:31:44,564 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:31:44,564 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:31:44,564 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:31:45,010 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:31:45,010 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:31:45,011 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:32:22,718 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:32:22,718 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:32:22,719 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:32:23,603 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:32:23,604 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:32:23,604 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:32:23,728 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:32:23,729 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:32:23,729 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:32:42,548 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:32:42,548 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:32:42,548 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:32:42,594 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:32:42,594 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:32:42,594 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:32:42,674 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:32:42,674 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:32:42,674 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:33:30,959 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:33:30,959 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:33:30,960 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:33:32,709 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:33:32,709 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:33:32,709 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:33:38,925 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:33:38,925 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:33:38,925 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:33:39,199 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:33:39,199 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:33:39,199 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:33:40,858 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:33:40,858 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:33:40,858 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:33:48,573 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:33:48,573 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:33:48,573 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:45:08,500 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:45:08,500 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:45:08,500 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:46:27,471 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:46:27,471 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:46:27,471 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:46:27,475 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:46:27,475 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:46:27,475 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:46:27,518 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:46:27,519 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:46:27,519 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:47:51,982 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:47:51,982 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:47:51,983 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:47:53,648 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:47:53,648 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:47:53,649 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:47:53,752 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:47:53,760 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:47:53,760 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:47:57,683 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:47:57,684 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:47:57,684 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:48:26,630 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:48:26,631 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:48:26,631 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:03,921 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:03,922 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:03,922 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:05,971 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:05,971 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:05,971 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:06,844 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:06,845 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:06,845 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:37,766 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:37,766 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:37,766 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:38,135 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:38,135 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:38,135 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:38,469 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:38,470 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:38,470 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:50,076 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:50,076 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:50,076 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:50,621 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:50,621 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:50,622 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:51:51,121 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:51:51,121 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:51:51,121 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:54:34,025 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:54:34,025 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:54:34,026 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:55:07,419 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:55:07,419 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:55:07,420 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:56:36,788 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:56:36,788 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:56:36,789 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 16:57:28,423 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 16:57:28,424 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 16:57:28,424 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:02:57,891 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:02:57,892 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:02:57,892 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:02:58,057 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:02:58,058 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:02:58,058 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:06,158 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:06,158 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:06,158 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:11,946 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:11,946 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:11,946 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:13,580 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:13,580 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:13,580 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:14,796 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:14,796 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:14,796 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:32,983 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:32,983 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:32,983 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:33,693 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:33,693 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:33,694 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:34,623 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:34,623 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:34,623 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:42,965 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:42,965 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:42,965 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:03:50,461 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:03:50,461 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:03:50,462 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:42:44,601 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:42:44,601 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:42:44,601 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:42:44,601 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:42:44,601 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:42:44,602 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:42:44,605 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:42:44,605 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:42:44,605 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:42:52,770 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:42:52,771 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:42:52,771 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:42:53,014 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:42:53,014 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:42:53,014 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:42:53,120 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:42:53,120 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:42:53,121 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:43:03,080 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:43:03,081 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:43:03,081 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:43:03,212 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:43:03,212 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:43:03,212 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:43:03,355 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:43:03,355 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:43:03,355 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:43:13,341 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:43:13,341 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:43:13,342 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:43:13,382 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:43:13,382 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:43:13,382 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:43:13,735 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:43:13,735 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:43:13,735 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:43:59,109 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:43:59,109 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:43:59,110 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:43:59,781 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:43:59,782 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:43:59,782 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:44:00,223 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:44:00,223 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:44:00,223 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:44:18,321 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:44:18,321 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:44:18,321 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:44:20,070 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:44:20,070 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:44:20,070 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:44:20,459 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:44:20,459 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:44:20,459 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:44:59,843 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:44:59,843 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:44:59,844 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:47:37,566 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:47:37,566 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:47:37,567 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:47:41,162 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-19 17:47:41,163 - neo4j - WARNING - Transaction failed and will be retried in 0.9414524155151306s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:47:42,106 - neo4j - WARNING - Transaction failed and will be retried in 1.6474380241159425s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:47:43,754 - neo4j - WARNING - Transaction failed and will be retried in 4.357060985863204s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:47:48,115 - neo4j - WARNING - Transaction failed and will be retried in 7.433773949913766s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:47:55,557 - neo4j - WARNING - Transaction failed and will be retried in 13.674416941726177s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:48:09,240 - neo4j - WARNING - Transaction failed and will be retried in 36.245734303839086s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:48:45,598 - LLM_Logger - INFO - LLM交互 #1 - 生成Cypher查询 - 提示词已发送
+2025-08-19 17:48:45,994 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-19 17:48:45,996 - neo4j - WARNING - Transaction failed and will be retried in 1.0428958727805546s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:48:47,040 - neo4j - WARNING - Transaction failed and will be retried in 1.7436927400315154s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:48:48,785 - neo4j - WARNING - Transaction failed and will be retried in 3.5313416666201345s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:48:52,320 - neo4j - WARNING - Transaction failed and will be retried in 7.989622923249605s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:49:00,318 - neo4j - WARNING - Transaction failed and will be retried in 15.791013663704135s (Couldn't connect to localhost:7688 (resolved to ()):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7688)) (reason [Errno 111] Connection refused))
+2025-08-19 17:49:16,146 - LLM_Logger - INFO - LLM交互 #2 - 生成Cypher查询 - 提示词已发送
+2025-08-19 17:49:17,145 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-19 17:49:17,155 - LLM_Logger - INFO - LLM交互 #2 - 生成Cypher查询 - 回应已接收
+2025-08-19 17:49:17,262 - LLM_Logger - INFO - LLM交互 #3 - 生成最终答案(简单流程) - 提示词已发送
+2025-08-19 17:49:17,265 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-19 17:49:17,267 - LLM_Logger - INFO - LLM交互 #3 - 生成Cypher查询 - 回应已接收
+2025-08-19 17:49:17,358 - LLM_Logger - INFO - LLM交互 #4 - 生成最终答案(简单流程) - 提示词已发送
+2025-08-19 17:49:17,640 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-19 17:49:17,758 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-19 17:49:18,533 - LLM_Logger - INFO - LLM交互 #4 - 生成最终答案(简单流程) - 回应已接收
+2025-08-19 17:49:18,534 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
+2025-08-19 17:49:18,745 - LLM_Logger - INFO - LLM交互 #4 - 生成最终答案(简单流程) - 回应已接收
+2025-08-19 17:49:18,746 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
+2025-08-19 17:59:58,850 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:59:58,850 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:59:58,850 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:59:58,850 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:59:58,851 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:59:58,851 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 17:59:58,870 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 17:59:58,871 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 17:59:58,871 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:09,670 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:09,670 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:09,670 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:17,484 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:17,485 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:17,485 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:18,219 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:18,220 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:18,220 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:25,872 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:25,874 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:25,874 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:26,026 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:26,034 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:26,035 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:26,509 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:26,509 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:26,510 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:57,297 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:57,298 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:57,298 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:57,473 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:57,473 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:57,473 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:00:57,752 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:00:57,752 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:00:57,752 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:01:40,108 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:01:40,109 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:01:40,109 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:01:40,258 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:01:40,258 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:01:40,259 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:01:40,483 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:01:40,483 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:01:40,484 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:01:52,216 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:01:52,216 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:01:52,216 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:02:21,378 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 18:02:21,378 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 18:02:21,378 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 18:02:45,156 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-19 18:02:47,558 - LLM_Logger - INFO - LLM交互 #1 - 生成Cypher查询 - 提示词已发送
+2025-08-19 18:02:50,032 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-19 18:02:50,040 - LLM_Logger - INFO - LLM交互 #1 - 生成Cypher查询 - 回应已接收
+2025-08-19 18:02:50,514 - LLM_Logger - INFO - LLM交互 #2 - 生成最终答案(简单流程) - 提示词已发送
+2025-08-19 18:02:50,952 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-19 18:02:53,249 - LLM_Logger - INFO - LLM交互 #2 - 生成最终答案(简单流程) - 回应已接收
+2025-08-19 18:02:53,249 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
+2025-08-19 18:04:35,261 - LLM_Logger - INFO - 工作流步骤: 工作流开始 - 开始执行工作流: naive_text2cypher
+2025-08-19 18:04:35,567 - LLM_Logger - INFO - LLM交互 #3 - 生成Cypher查询 - 提示词已发送
+2025-08-19 18:04:37,453 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-19 18:04:37,454 - LLM_Logger - INFO - LLM交互 #3 - 生成Cypher查询 - 回应已接收
+2025-08-19 18:04:37,922 - LLM_Logger - INFO - LLM交互 #4 - 生成最终答案(简单流程) - 提示词已发送
+2025-08-19 18:04:38,266 - httpx - INFO - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-08-19 18:04:40,080 - LLM_Logger - INFO - LLM交互 #4 - 生成最终答案(简单流程) - 回应已接收
+2025-08-19 18:04:40,081 - LLM_Logger - INFO - 工作流步骤: 工作流完成 - 工作流执行成功: naive_text2cypher
+2025-08-19 22:30:11,534 - neo4j.pool - WARNING - Transaction failed and will be retried in 0.8338559340860365s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-19 22:30:12,369 - neo4j.pool - WARNING - Transaction failed and will be retried in 2.3666579197376008s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-19 22:30:14,738 - neo4j.pool - WARNING - Transaction failed and will be retried in 3.8759445640224937s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-19 22:30:18,615 - neo4j.pool - WARNING - Transaction failed and will be retried in 9.20005189174409s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-19 22:30:27,825 - neo4j.pool - WARNING - Transaction failed and will be retried in 19.162621184155444s (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused))
+2025-08-19 22:30:49,181 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 22:30:49,181 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with mean pooling.
+2025-08-19 22:30:49,182 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-08-19 22:39:29,996 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3
+2025-08-19 22:39:29,996 - sentence_transformers.SentenceTransformer - WARNING - No sentence-transformers model found with name /home/g0j/.cache/huggingface/hub/models--BAAI--bge-m3. Creating a new one with MEAN pooling.
+2025-08-19 22:39:29,997 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2

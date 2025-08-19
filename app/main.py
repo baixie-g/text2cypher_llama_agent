@@ -57,9 +57,9 @@ async def get_index(request: Request):
     databases_list = list(resource_manager.databases.keys())
 
     return templates.TemplateResponse(
-        request=request,
-        name="pages/index.html",
-        context={
+        "pages/index.html",
+        {
+            "request": request,
             "workflows": workflows,
             "llms": llms_list,
             "databases": databases_list,

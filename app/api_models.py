@@ -55,6 +55,7 @@ class LLMInfo(BaseModel):
 
 # 数据库信息模型
 class DatabaseInfo(BaseModel):
+    id: Optional[str] = Field(None, description="Nacos 配置中的数据源ID")
     name: str = Field(..., description="数据库名称")
     status: DatabaseStatus = Field(..., description="数据库状态")
     uri: str = Field(..., description="数据库连接URI")
@@ -74,7 +75,9 @@ class WorkflowInfo(BaseModel):
 # 工作流执行请求模型
 class WorkflowExecuteRequest(BaseModel):
     llm_name: str = Field(..., description="要使用的LLM模型名称")
-    database_name: str = Field(..., description="要使用的数据库名称")
+    # 兼容两种指定方式：优先使用 database_id，若为空则使用 database_name
+    database_id: Optional[str] = Field(None, description="要使用的数据库ID（来自Nacos配置）")
+    database_name: Optional[str] = Field(None, description="要使用的数据库名称")
     workflow_type: WorkflowType = Field(..., description="工作流类型")
     input_text: str = Field(..., description="输入文本")
     context: Optional[Dict[str, Any]] = Field(None, description="额外上下文信息")

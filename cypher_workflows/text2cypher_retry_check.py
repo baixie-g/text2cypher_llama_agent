@@ -117,6 +117,7 @@ class NaiveText2CypherRetryCheckFlow(Workflow):
             SseEvent(message=f"Executing Cypher: {ev.cypher}", label="Cypher execution")
         )
         try:
+            print(f"[INFO] 即将查询数据库: {self.db_name}")
             # Hard limit to 100 records
             database_output = str(self.graph_store.structured_query(ev.cypher)[:100])
             logger.log_workflow_step("步骤完成", "Cypher查询执行成功", {"output_length": len(database_output)})

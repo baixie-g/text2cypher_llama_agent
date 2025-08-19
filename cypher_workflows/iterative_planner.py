@@ -205,6 +205,7 @@ class IterativePlanningFlow(Workflow):
         )
 
         try:
+            print(f"[INFO] 即将查询数据库: {self.db_name}")
             database_output = self.graph_store.structured_query(ev.validated_cypher)[
                 :100
             ]  # Hard limit of 100 results

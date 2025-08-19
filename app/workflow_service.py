@@ -193,14 +193,32 @@ class WorkflowService:
                 events = []
                 
                 try:
+                    # 兼容 database_id / database_name
+                    def _get(obj, key):
+                        if isinstance(obj, dict):
+                            return obj.get(key)
+                        return getattr(obj, key, None)
+
+                    db_id = _get(request, "database_id")
+                    db_name = _get(request, "database_name")
+                    chosen_db_name = None
+                    if db_id:
+                        chosen_db_name = self.resource_manager.get_database_name_by_id(db_id)
+                        if not chosen_db_name:
+                            raise ValueError(f"Database id '{db_id}' not found")
+                    else:
+                        if not db_name:
+                            raise ValueError("Either database_id or database_name must be provided")
+                        chosen_db_name = db_name
+
                     result = await self.execute_workflow(
-                        llm_name=request["llm_name"],
-                        database_name=request["database_name"],
-                        workflow_type=request["workflow_type"],
-                        input_text=request["input_text"],
-                        context=request.get("context", {}),
-                        timeout=request.get("timeout", 60),
-                        prompt_config=request.get("prompt_config")
+                        llm_name=_get(request, "llm_name"),
+                        database_name=chosen_db_name,
+                        workflow_type=_get(request, "workflow_type"),
+                        input_text=_get(request, "input_text"),
+                        context=(request.get("context", {}) if isinstance(request, dict) else (_get(request, "context") or {})),
+                        timeout=(request.get("timeout", 60) if isinstance(request, dict) else (_get(request, "timeout") or 60)),
+                        prompt_config=(request.get("prompt_config") if isinstance(request, dict) else _get(request, "prompt_config"))
                     )
                     
                     execution_time = (datetime.now() - start_time).total_seconds()
