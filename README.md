@@ -1,3 +1,4 @@
+python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8003
 # Text2Cypher LLama Agents
 
 A collection of LlamaIndex Workflows-powered agents that convert natural language to Cypher queries designed to retrieve information from a Neo4j database to answer the question.
